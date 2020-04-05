@@ -18,20 +18,20 @@
     <form id="survey-form" >
       <div class="form-group">
         <label for="name" id="name-label">Name</label>
-        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
       </div>
       <div class="form-group">
         <label for="email" id="email-label">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter your Email">
+        <input type="email" class="form-control" id="email" placeholder="Enter your Email" required>
       </div>
       <div class="form-group">
         <label for="Age" id="number-label">Age <small>(optional)</small></label>
-        <input type="number" class="form-control" id="Age" placeholder="Age" min="10">
+        <input type="number" class="form-control" id="Age" placeholder="10" min="10">
       </div>
-      <div class="form-group" id="dropdown">
-        <label for="role">Which option best describes your current role?</label>
-        <select class="form-control" id="role">
-          <option disabled>Select your option</option>
+      <div class="form-group">
+        <label for="role" id="role">Which option best describes your current role?</label>
+        <select class="form-control" name="role" id="dropdown" required="">
+          <option selected disabled>Select your option</option>
           <option>Student</option>
           <option>Full Time Job</option>
           <option>Full Time Learner</option>
@@ -40,7 +40,7 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="role">Would you recommend freeCodeCamp to a friend?</label>
+        <label>Would you recommend freeCodeCamp to a friend?</label>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="exampleRadios" id="Radios1" value="option1" checked>
           <label class="form-check-label" for="Radios1">
@@ -61,9 +61,9 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="favorite">What is your favorite feature of freeCodeCamp?</label>
-        <select class="form-control" id="favorite">
-          <option disabled>Select your option</option>
+        <label for="favorite" id="favorite">What is your favorite feature of freeCodeCamp?</label>
+        <select class="form-control" id="dropdown" name="favorite" required="">
+          <option selected disabled>Select your option</option>
           <option>Challanges</option>
           <option>Projects</option>
           <option>Community</option>
@@ -145,6 +145,11 @@
         <button type="button" id="submit" name="button" class="btn btn-lg btn-block btn-success">submit</button>
       </div>
     </form>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      document.getElementById("name-label").placeholder = "name";
+    </script>
   </body>
 
 </div>
